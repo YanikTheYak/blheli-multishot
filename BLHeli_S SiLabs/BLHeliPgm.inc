@@ -80,6 +80,15 @@ read_eeprom_block2:
 	inc	Temp1		
 	djnz	Temp4, read_eeprom_block2
 
+	mov	DPTR, #Eep_Pgm_Music_Notes
+	mov	Temp1, #Pgm_Music_Notes	
+	mov	Temp4, #56	; 56 bytes
+read_eeprom_block3:
+	call read_eeprom_byte
+	inc	DPTR				
+	inc	Temp1		
+	djnz	Temp4, read_eeprom_block3
+
 	mov	DPTR, #Eep_Dummy 			; Set pointer to uncritical area
 
 read_eeprom_exit:

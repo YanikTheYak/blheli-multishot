@@ -444,19 +444,22 @@ _Pgm_Pwm_Dither:			DS	1		; Programmed output PWM dither
 Pgm_Brake_On_Stop:			DS	1		; Programmed braking when throttle is zero
 Pgm_LED_Control:			DS	1		; Programmed LED control
 
+; Music data
+Pgm_Music_Notes:			DS 	16		; Programmed Music Notes
+Pgm_Music_Tune:				DS 	40		; Programmed Music Tune
+
 ; The sequence of the variables below is no longer of importance
 Pgm_Startup_Pwr_Decoded:		DS	1		; Programmed startup power decoded
 
-
 ; Indirect addressing data segment
-ISEG AT 0D0h					
-Temp_Storage:				DS	48		; Temporary storage
+ISEG AT 0DFh					
+Temp_Storage:				DS	33		; Temporary storage
 
 ;**** **** **** **** ****
 CSEG AT 1A00h            ; "Eeprom" segment
 EEPROM_FW_MAIN_REVISION		EQU	16		; Main revision of the firmware
-EEPROM_FW_SUB_REVISION		EQU	66		; Sub revision of the firmware
-EEPROM_LAYOUT_REVISION		EQU	33		; Revision of the EEPROM layout
+EEPROM_FW_SUB_REVISION		EQU	68		; Sub revision of the firmware
+EEPROM_LAYOUT_REVISION		EQU	33		; TODO: INCREMENT? - Revision of the EEPROM layout
 
 Eep_FW_Main_Revision:		DB	EEPROM_FW_MAIN_REVISION			; EEPROM firmware main revision number
 Eep_FW_Sub_Revision:		DB	EEPROM_FW_SUB_REVISION			; EEPROM firmware sub revision number
@@ -501,10 +504,16 @@ _Eep_Pgm_Pwm_Dither:		DB	0FFh
 Eep_Pgm_Brake_On_Stop:		DB	DEFAULT_PGM_BRAKE_ON_STOP		; EEPROM copy of programmed braking when throttle is zero
 Eep_Pgm_LED_Control:		DB	DEFAULT_PGM_LED_CONTROL			; EEPROM copy of programmed LED control
 
-Eep_Dummy:				DB	0FFh							; EEPROM address for safety reason
+Eep_Dummy:					DB	0FFh							; EEPROM address for safety reason
 
 CSEG AT 1A60h
-Eep_Name:					DB	"16.67_dshotcmd  "				; Name tag (16 Bytes)
+Eep_Name:					DB	"16.68_musicmix  "				; Name tag (16 Bytes)
+
+;**** **** **** **** ****
+; Music Data
+CSEG AT 1B00h
+Eep_Pgm_Music_Notes:		DS  16								; EEPROM copy of programmed 8 note bank (16 bytes)
+Eep_Pgm_Music_Tune:			DS  20								; EEPROM copy of programmed 40 note tune (40 bytes)
 
 ;**** **** **** **** ****
 Interrupt_Table_Definition		; SiLabs interrupts
