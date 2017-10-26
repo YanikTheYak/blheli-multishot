@@ -82,7 +82,7 @@ read_eeprom_block2:
 
 	mov	DPTR, #Eep_Pgm_Music_Notes
 	mov	Temp1, #Pgm_Music_Notes	
-	mov	Temp4, #56	; 56 bytes
+	mov	Temp4, #71	; 71 bytes
 read_eeprom_block3:
 	call read_eeprom_byte
 	inc	DPTR				

@@ -444,16 +444,17 @@ _Pgm_Pwm_Dither:			DS	1		; Programmed output PWM dither
 Pgm_Brake_On_Stop:			DS	1		; Programmed braking when throttle is zero
 Pgm_LED_Control:			DS	1		; Programmed LED control
 
+; The sequence of the variables below is no longer of importance
+Pgm_Startup_Pwr_Decoded:	DS	1		; Programmed startup power decoded
+
 ; Music data
 Pgm_Music_Notes:			DS 	16		; Programmed Music Notes
 Pgm_Music_Tune:				DS 	40		; Programmed Music Tune
-
-; The sequence of the variables below is no longer of importance
-Pgm_Startup_Pwr_Decoded:		DS	1		; Programmed startup power decoded
+Pgm_Music_Duration:			DS	15		; Programmed Music Durations
 
 ; Indirect addressing data segment
-ISEG AT 0DFh					
-Temp_Storage:				DS	33		; Temporary storage
+ISEG AT 0EEh					
+Temp_Storage:				DS	17		; Temporary storage
 
 ;**** **** **** **** ****
 CSEG AT 1A00h            ; "Eeprom" segment
@@ -512,8 +513,11 @@ Eep_Name:					DB	"16.68_musicmix  "				; Name tag (16 Bytes)
 ;**** **** **** **** ****
 ; Music Data
 CSEG AT 1B00h
-Eep_Pgm_Music_Notes:		DS  16								; EEPROM copy of programmed 8 note bank (16 bytes)
-Eep_Pgm_Music_Tune:			DS  20								; EEPROM copy of programmed 40 note tune (40 bytes)
+Eep_Pgm_Music_Notes:		DB  6eh, 22h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h	; EEPROM copy of programmed 8 note bank (16 bytes)
+Eep_Pgm_Music_Tunes:		DB  12h, 12h, 12h								; EEPROM copy of programmed 40 note tune (40 bytes)
+Eep_Pgm_Music_TunesSpace:	DS	17
+Eep_Pgm_Music_Durations:	DB	64h, 0c8h, 0deh
+Eep_Pgm_Music_DurationsSpc:	DS	13 
 
 ;**** **** **** **** ****
 Interrupt_Table_Definition		; SiLabs interrupts
@@ -3868,7 +3872,12 @@ Tone_Selection:
 	jz Startup_GoT										
 	dec A		
 	jz HG_Bounce		
+	dec A		
+	jz Startup_Tune_Bounce		
 	ljmp OEM_Tones
+
+Startup_Tune_Bounce:
+	ljmp Startup_Tune	
 
 HG_Bounce:
 	ljmp Startup_HG	
@@ -4054,6 +4063,48 @@ Startup_HG:
 	call music_e4		
 	call music_e4
 	jmp startup_end			
+
+Startup_Tune:
+	mov Temp1, #Pgm_Music_Notes
+PlayNote:
+	mov A, @Temp1
+	mov Temp4, A									; Frequency of note
+
+	inc Temp1
+	mov A, @Temp1
+	push ACC
+	anl A, #0fh
+	swap A
+	mov Temp5, A									; Octave - one ms ;frequency of tone 1=500, 2=1000, 3=1500	
+
+	pop ACC
+	anl A, #0f0h
+	add A, #Pgm_Music_Duration
+	mov Temp2, A
+	mov A, @Temp2
+	mov Temp3, A									; duration of note
+
+	cjne Temp3, #222, Music_error					;length of tone		
+	cjne Temp4, #110, Music_error2		
+	cjne Temp5, #2, Music_error3					;one ms ;frequency of tone 1=500, 2=1000, 3=1500
+
+	mov A, Temp1
+	push ACC
+	jmp music
+	pop ACC
+	mov Temp1, A
+	jmp startup_end
+
+Music_error3:
+	call music_f4		
+	call wait10ms
+Music_error2:		
+	call music_f4		
+	call wait10ms
+Music_error:		
+	call music_f4		
+	call wait10ms		
+	jmp startup_end
 
 OEM_Tones:		
 	call beep_f1
