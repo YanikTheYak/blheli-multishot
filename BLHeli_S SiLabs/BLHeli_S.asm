@@ -65,7 +65,8 @@ $NOMOD51
 ; -Rev16.53 Added signal type identification via signal and arming tones.
 ; - Rev16.6 Fixed signal detection issue of multishot at 32kHz
 ;           Improved bidirectional mode for high input signal rates
-;
+; -Rev16.66 Added Some dshot commands
+; -Reb16.67 dshot commands only work with tlm bit set
 ;
 ;**** **** **** **** ****
 ; Minimum 8K Bytes of In-System Self-Programmable Flash
@@ -503,7 +504,7 @@ Eep_Pgm_LED_Control:		DB	DEFAULT_PGM_LED_CONTROL			; EEPROM copy of programmed L
 Eep_Dummy:				DB	0FFh							; EEPROM address for safety reason
 
 CSEG AT 1A60h
-Eep_Name:					DB	"16.66_dshottest "				; Name tag (16 Bytes)
+Eep_Name:					DB	"16.67_dshotcmd  "				; Name tag (16 Bytes)
 
 ;**** **** **** **** ****
 Interrupt_Table_Definition		; SiLabs interrupts
@@ -666,7 +667,7 @@ t1_int_xor_ok:
 	mov	A, Temp3
 	cpl	A
 	swap	A
-	anl	A, #0Eh			; High nibble of low byte (ignore lsb)
+	anl	A, #0Fh			; High nibble of low byte 
 	orl	A, Temp2
 	mov	Temp3, A
 	mov	A, Temp4			; High nibble of high byte
@@ -695,7 +696,9 @@ t1_int_xor_ok:
 	
 
 t1_dshot_set_range: ;We are in the special dshot range
-	rr	A ;divide by 2
+	clr	C
+	rrc	A ;divide by 2
+	jnc t1_dshot_set_invalid ;check for tlm bit set
 	mov Temp2, A
 	clr	C
 	subb A, Dshot_Settings
