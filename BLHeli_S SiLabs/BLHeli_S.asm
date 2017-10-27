@@ -449,8 +449,8 @@ Pgm_Startup_Pwr_Decoded:	DS	1		; Programmed startup power decoded
 
 ; Music data
 Pgm_Music_Notes:			DS 	16		; Programmed Music Notes
+Pgm_Music_Duration:			DS	16		; Programmed Music Durations
 Pgm_Music_Tune:				DS 	40		; Programmed Music Tune
-Pgm_Music_Duration:			DS	15		; Programmed Music Durations
 
 ; Indirect addressing data segment
 ISEG AT 0EEh					
@@ -514,10 +514,10 @@ Eep_Name:					DB	"16.68_musicmix  "				; Name tag (16 Bytes)
 ; Music Data
 CSEG AT 1B00h
 Eep_Pgm_Music_Notes:		DB  6eh, 22h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h	; EEPROM copy of programmed 8 note bank (16 bytes)
-Eep_Pgm_Music_Tunes:		DB  12h, 12h, 12h								; EEPROM copy of programmed 40 note tune (40 bytes)
-Eep_Pgm_Music_TunesSpace:	DS	17
 Eep_Pgm_Music_Durations:	DB	64h, 0c8h, 0deh
 Eep_Pgm_Music_DurationsSpc:	DS	13 
+Eep_Pgm_Music_Tunes:		DB  12h, 12h, 12h								; EEPROM copy of programmed 40 note tune (40 bytes)
+Eep_Pgm_Music_TunesSpace:	DS	37
 
 ;**** **** **** **** ****
 Interrupt_Table_Definition		; SiLabs interrupts
@@ -4065,19 +4065,21 @@ Startup_HG:
 	jmp startup_end			
 
 Startup_Tune:
-	mov Temp1, #Pgm_Music_Notes
+	mov DPTR, #Pgm_Music_Notes
 PlayNote:
-	mov A, @Temp1
-	mov Temp4, A									; Frequency of note
+	clr	A
+	movc A, @A+DPTR			; Read Frequency of Note
+	mov	Temp4, A
 
-	inc Temp1
-	mov A, @Temp1
+	inc DPTR
+	clr	A
+	movc A, @A+DPTR
 	push ACC
 	anl A, #0fh
 	swap A
 	mov Temp5, A									; Octave - one ms ;frequency of tone 1=500, 2=1000, 3=1500	
-
 	pop ACC
+
 	anl A, #0f0h
 	add A, #Pgm_Music_Duration
 	mov Temp2, A
@@ -4088,11 +4090,9 @@ PlayNote:
 	cjne Temp4, #110, Music_error2		
 	cjne Temp5, #2, Music_error3					;one ms ;frequency of tone 1=500, 2=1000, 3=1500
 
-	mov A, Temp1
-	push ACC
 	jmp music
-	pop ACC
-	mov Temp1, A
+	inc DPTR
+; TODO LOOP TO PlayNote
 	jmp startup_end
 
 Music_error3:

@@ -18,8 +18,12 @@ Output\A_L_0_REV16_68.OBJ TO Output\A_L_0_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6718
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6723
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -43,8 +47,12 @@ Output\A_L_5_REV16_68.OBJ TO Output\A_L_5_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -68,8 +76,12 @@ Output\A_L_10_REV16_68.OBJ TO Output\A_L_10_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -93,8 +105,12 @@ Output\A_L_15_REV16_68.OBJ TO Output\A_L_15_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -118,8 +134,12 @@ Output\A_L_20_REV16_68.OBJ TO Output\A_L_20_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -143,8 +163,12 @@ Output\A_L_25_REV16_68.OBJ TO Output\A_L_25_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -168,8 +192,12 @@ Output\A_L_30_REV16_68.OBJ TO Output\A_L_30_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -193,8 +221,12 @@ Output\A_L_40_REV16_68.OBJ TO Output\A_L_40_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -218,8 +250,12 @@ Output\A_L_50_REV16_68.OBJ TO Output\A_L_50_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -243,8 +279,12 @@ Output\A_L_70_REV16_68.OBJ TO Output\A_L_70_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -268,8 +308,12 @@ Output\A_L_90_REV16_68.OBJ TO Output\A_L_90_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -293,8 +337,12 @@ Output\A_H_0_REV16_68.OBJ TO Output\A_H_0_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6880
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6885
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -318,8 +366,12 @@ Output\A_H_5_REV16_68.OBJ TO Output\A_H_5_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6833
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6837
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -343,8 +395,12 @@ Output\A_H_10_REV16_68.OBJ TO Output\A_H_10_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6833
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6837
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -368,8 +424,12 @@ Output\A_H_15_REV16_68.OBJ TO Output\A_H_15_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6833
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6837
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -393,8 +453,12 @@ Output\A_H_20_REV16_68.OBJ TO Output\A_H_20_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6833
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6837
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -418,8 +482,12 @@ Output\A_H_25_REV16_68.OBJ TO Output\A_H_25_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6833
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6837
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -443,8 +511,12 @@ Output\A_H_30_REV16_68.OBJ TO Output\A_H_30_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6833
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6837
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -468,8 +540,12 @@ Output\A_H_40_REV16_68.OBJ TO Output\A_H_40_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6833
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6837
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -493,8 +569,12 @@ Output\A_H_50_REV16_68.OBJ TO Output\A_H_50_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6833
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6837
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -518,8 +598,12 @@ Output\A_H_70_REV16_68.OBJ TO Output\A_H_70_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6833
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6837
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -543,8 +627,12 @@ Output\A_H_90_REV16_68.OBJ TO Output\A_H_90_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6833
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6837
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -568,8 +656,12 @@ Output\B_L_0_REV16_68.OBJ TO Output\B_L_0_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6718
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6723
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
 COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
@@ -593,5 +685,14 @@ Output\B_L_5_REV16_68.OBJ TO Output\B_L_5_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=218.0 xdata=0 const=0 code=6671
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
+*** WARNING L30: MEMORY SPACE OVERLAP
+    FROM:    I:0000EEH   
+    TO:      I:0000EFH   
+
+Program Size: data=219.0 xdata=0 const=0 code=6676
+LX51 RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
+
+Extended 8051/251 Object to Hex File Converter V1.43.0.0
+COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2012
+
+GENERATING INTEL H386 FILE: Output\B_L_5_REV16_68.HEX
