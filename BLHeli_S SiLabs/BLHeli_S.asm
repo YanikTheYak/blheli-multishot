@@ -453,8 +453,8 @@ Pgm_Music_Duration:			DS	16		; Programmed Music Durations
 Pgm_Music_Tune:				DS 	40		; Programmed Music Tune
 
 ; Indirect addressing data segment
-ISEG AT 0EEh					
-Temp_Storage:				DS	17		; Temporary storage
+ISEG AT 0EFh					
+Temp_Storage:				DS	16		; Temporary storage
 
 ;**** **** **** **** ****
 CSEG AT 1A00h            ; "Eeprom" segment
@@ -4065,26 +4065,33 @@ Startup_HG:
 	jmp startup_end			
 
 Startup_Tune:
-	mov DPTR, #Pgm_Music_Notes
-PlayNote:
+	mov DPTR, #Pgm_Music_Tune		; The list of notes and rests to play
+NextNote:
 	clr	A
-	movc A, @A+DPTR			; Read Frequency of Note
+	movc A, @A+DPTR					; Read Note and Rest byte
+
+	push ACC						; Keep the full byte
+	anl A, #0fh						; Mask lo-nibble
+	push ACC						; Keep the lo-nibble
+
+	mov DPTR, #Pgm_Music_Notes		; Point to the note array
+PlayNote:
+	movc A, @A+DPTR					; Read Frequency of Note
 	mov	Temp4, A
 
-	inc DPTR
-	clr	A
-	movc A, @A+DPTR
-	push ACC
-	anl A, #0fh
-	swap A
-	mov Temp5, A									; Octave - one ms ;frequency of tone 1=500, 2=1000, 3=1500	
-	pop ACC
+	pop ACC							; Retrieve the lo-nibble
+	movc A, @A+DPTR					; Read Octave and Duration of Note
 
-	anl A, #0f0h
-	add A, #Pgm_Music_Duration
-	mov Temp2, A
-	mov A, @Temp2
-	mov Temp3, A									; duration of note
+	push ACC						; Keep the full byte
+	anl A, #f0h						; Mask out lo-nibble
+	swap A							; Swap hi to lo
+	mov Temp5, A					; Octave - one ms ;frequency of tone 1=500, 2=1000, 3=1500	
+
+	pop ACC							; Retrieve the lo-nibble
+	anl A, #0fh
+	mov DPTR, #Pgm_Music_Duration
+	movc A, @A+DPTR					; Read Duration of Note
+	mov Temp3, A					; duration of note
 
 	cjne Temp3, #222, Music_error					;length of tone		
 	cjne Temp4, #110, Music_error2		
