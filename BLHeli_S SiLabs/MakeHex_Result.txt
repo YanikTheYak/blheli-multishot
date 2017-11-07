@@ -18,7 +18,7 @@ Output\A_L_0_REV16_68.OBJ TO Output\A_L_0_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6728
+Program Size: data=178.0 xdata=0 const=0 code=6736
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -43,7 +43,7 @@ Output\A_L_5_REV16_68.OBJ TO Output\A_L_5_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6681
+Program Size: data=178.0 xdata=0 const=0 code=6689
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -68,7 +68,7 @@ Output\A_L_10_REV16_68.OBJ TO Output\A_L_10_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6681
+Program Size: data=178.0 xdata=0 const=0 code=6689
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -93,7 +93,7 @@ Output\A_L_15_REV16_68.OBJ TO Output\A_L_15_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6681
+Program Size: data=178.0 xdata=0 const=0 code=6689
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -118,7 +118,7 @@ Output\A_L_20_REV16_68.OBJ TO Output\A_L_20_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6681
+Program Size: data=178.0 xdata=0 const=0 code=6689
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -143,7 +143,7 @@ Output\A_L_25_REV16_68.OBJ TO Output\A_L_25_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6681
+Program Size: data=178.0 xdata=0 const=0 code=6689
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -168,7 +168,7 @@ Output\A_L_30_REV16_68.OBJ TO Output\A_L_30_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6681
+Program Size: data=178.0 xdata=0 const=0 code=6689
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -193,7 +193,7 @@ Output\A_L_40_REV16_68.OBJ TO Output\A_L_40_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6681
+Program Size: data=178.0 xdata=0 const=0 code=6689
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -218,7 +218,7 @@ Output\A_L_50_REV16_68.OBJ TO Output\A_L_50_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6681
+Program Size: data=178.0 xdata=0 const=0 code=6689
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -243,7 +243,7 @@ Output\A_L_70_REV16_68.OBJ TO Output\A_L_70_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6681
+Program Size: data=178.0 xdata=0 const=0 code=6689
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -268,7 +268,7 @@ Output\A_L_90_REV16_68.OBJ TO Output\A_L_90_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6681
+Program Size: data=178.0 xdata=0 const=0 code=6689
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -293,7 +293,7 @@ Output\A_H_0_REV16_68.OBJ TO Output\A_H_0_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6890
+Program Size: data=178.0 xdata=0 const=0 code=6898
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -318,7 +318,7 @@ Output\A_H_5_REV16_68.OBJ TO Output\A_H_5_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6842
+Program Size: data=178.0 xdata=0 const=0 code=6851
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -343,7 +343,7 @@ Output\A_H_10_REV16_68.OBJ TO Output\A_H_10_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6842
+Program Size: data=178.0 xdata=0 const=0 code=6851
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -368,7 +368,7 @@ Output\A_H_15_REV16_68.OBJ TO Output\A_H_15_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6842
+Program Size: data=178.0 xdata=0 const=0 code=6851
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -393,7 +393,7 @@ Output\A_H_20_REV16_68.OBJ TO Output\A_H_20_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6842
+Program Size: data=178.0 xdata=0 const=0 code=6851
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -418,7 +418,7 @@ Output\A_H_25_REV16_68.OBJ TO Output\A_H_25_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6842
+Program Size: data=178.0 xdata=0 const=0 code=6851
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -443,7 +443,7 @@ Output\A_H_30_REV16_68.OBJ TO Output\A_H_30_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6842
+Program Size: data=178.0 xdata=0 const=0 code=6851
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -468,7 +468,7 @@ Output\A_H_40_REV16_68.OBJ TO Output\A_H_40_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6842
+Program Size: data=178.0 xdata=0 const=0 code=6851
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -493,7 +493,7 @@ Output\A_H_50_REV16_68.OBJ TO Output\A_H_50_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6842
+Program Size: data=178.0 xdata=0 const=0 code=6851
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -518,7 +518,7 @@ Output\A_H_70_REV16_68.OBJ TO Output\A_H_70_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6842
+Program Size: data=178.0 xdata=0 const=0 code=6851
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -543,7 +543,7 @@ Output\A_H_90_REV16_68.OBJ TO Output\A_H_90_REV16_68.OMF PAGEWIDTH (120) PAGELEN
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6842
+Program Size: data=178.0 xdata=0 const=0 code=6851
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -568,7 +568,7 @@ Output\B_L_0_REV16_68.OBJ TO Output\B_L_0_REV16_68.OMF PAGEWIDTH (120) PAGELENGT
     FROM:    I:000020H   
     TO:      I:000028H   
 
-Program Size: data=178.0 xdata=0 const=0 code=6728
+Program Size: data=178.0 xdata=0 const=0 code=6736
 LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
 
 Extended 8051/251 Object to Hex File Converter V1.43.0.0
@@ -579,29 +579,3 @@ GENERATING INTEL H386 FILE: Output\B_L_0_REV16_68.HEX
  
 ********************************************************************  
 B_L_5  
-********************************************************************  
-
-MACRO ASSEMBLER AX51 V3.12.0.0
-COPYRIGHT KEIL ELEKTRONIK GmbH 2000 - 2013
-
-ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).
-
-LX51 LINKER/LOCATER V4.66.30.0 - SN: K1RIC-10K3ZZ
-COPYRIGHT ARM Germany GmbH 1995 - 2014
-Output\B_L_5_REV16_68.OBJ TO Output\B_L_5_REV16_68.OMF PAGEWIDTH (120) PAGELENGTH (65) 
-*** WARNING L30: MEMORY SPACE OVERLAP
-    FROM:    I:000020H   
-    TO:      I:000028H   
-
-Program Size: data=178.0 xdata=0 const=0 code=6681
-LX51 RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
-
-
-
-*** WARNING L30: MEMORY SPACE OVERLAP
-    FROM:    I:000020H   
-    TO:      I:000028H   
-
-*** ERROR L212: I/O ERROR ON LISTING FILE:
-    EXCEPTION 002AH: I/O-ERROR
-    FILE: OUTPUT\B_L_5_REV16_68.MAP
