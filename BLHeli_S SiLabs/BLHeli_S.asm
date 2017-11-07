@@ -509,9 +509,9 @@ Eep_Name:					DB	"16.68_musicmix  "				; Name tag (16 Bytes)
 ; Music Data
 CSEG AT 1B00h				;	[Frq], [Oct,Dur]
 Eep_Pgm_Music_Notes:		DB  6eh, 22h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h	; EEPROM copy of programmed 8 note bank (16 bytes)
-Eep_Pgm_Music_Durations:	DB	64h, 0c8h, 0deh
+Eep_Pgm_Music_Durations:	DB	0ffh, 64h, 0deh								; Duration 0 is not used (means end of tune)
 Eep_Pgm_Music_DurationsSpc:	DS	13 
-Eep_Pgm_Music_Tunes:		DB  12h, 12h, 12h								; EEPROM copy of programmed 40 note tune (40 bytes)
+Eep_Pgm_Music_Tunes:		DB  01h, 01h, 0ffh								; EEPROM copy of programmed 40 note tune (40 bytes)
 Eep_Pgm_Music_TunesSpace:	DS	37
 
 ;**** **** **** **** ****
@@ -4063,62 +4063,54 @@ Startup_HG:
 
 Startup_Tune:
 	mov DPTR, #Eep_Pgm_Music_Tunes	; The music score - list of notes and rests to play
-NextNote:
 	clr	A
+NextNote:
+	push ACC						; Store index into score
 	movc A, @A+DPTR					; Read [Note] and [Rest] byte
+	jz tune_end						; End of tune
 
-	push ACC						; Keep the full byte
-	anl A, #f0h						; Mask lo-nibble
+	push ACC						; Store the full byte
+	anl A, #0f0h					; Mask lo-nibble
 	swap A							; Swap hi to lo - [Note]
 
 	mov DPTR, #Eep_Pgm_Music_Notes	; Point to the available note array
 PlayNote:
 	movc A, @A+DPTR					; Read Frequency of [Note]
-	mov	Temp4, A
+	mov	Temp4, A					; Note in Temp4
 
 	inc DPTR						; Increment to point at [Octave] and [Duration] data
 	clr A
 	movc A, @A+DPTR					; Read [Octave] and [Duration] of Note
 
-	push ACC						; Keep the full byte
-	anl A, #f0h						; Mask lo-nibble
+	push ACC						; Store the full byte
+	anl A, #0f0h					; Mask lo-nibble
 	swap A							; Swap hi to lo [Octave]
-	mov Temp5, A					; Octave - one ms ;frequency of tone 1=500, 2=1000, 3=1500	
+	mov Temp5, A					; Octave in Temp5 - one ms ;frequency of tone 1=500, 2=1000, 3=1500	
 
 	pop ACC							; Retrieve the [Octave] and [Duration] Byte
 	anl A, #0fh						; Mask the hi-nibble - Keep [Duration]
 	mov DPTR, #Eep_Pgm_Music_Durations
 	movc A, @A+DPTR					; Read Duration of Note
-	mov Temp3, A					; Duration of note
+	mov Temp3, A					; Duration of note in Temp3
 
 	jmp music						; Play the note
 
-	pop A							; Retrieve the [Note] and [Rest] Byte
+	pop ACC							; Retrieve the [Note] and [Rest] Byte
 	anl A, #0fh						; Mask the hi-nibble - Keep [Rest]
 	mov DPTR, #Eep_Pgm_Music_Durations
 	movc A, @A+DPTR					; Read Duration of [Rest]
 	mov Temp2, A					; Duration of [Rest]
 
 	call waitTemp2ms				; Wait the rest
-;	cjne Temp3, #222, Music_error					;length of tone		
-;	cjne Temp4, #110, Music_error2		
-;	cjne Temp5, #2, Music_error3					;one ms ;frequency of tone 1=500, 2=1000, 3=1500
-; TODO SORT THE TUNE POINTER TO LOOP
-	inc DPTR	; WONT WORK - DPTR IS NOT CORRECT NOW
 
-; TODO LOOP TO PlayNote
-	jmp startup_end
+	mov DPTR, #Eep_Pgm_Music_Tunes	; The music score - list of notes and rests to play
+	pop ACC							; Retrieve the index into the music score
+	inc A							; Increment to the next note
+	jmp NextNote					; Play the next note
 
-Music_error3:
-	call music_f4		
-	call wait10ms
-Music_error2:		
-	call music_f4		
-	call wait10ms
-Music_error:		
-	call music_f4		
-	call wait10ms		
-	jmp startup_end
+tune_end:
+	pop ACC							; Reset stack
+	jmp startup_end					; Jump to end of startup tune
 
 OEM_Tones:		
 	call beep_f1
