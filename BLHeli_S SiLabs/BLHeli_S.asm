@@ -509,10 +509,9 @@ Eep_Name:					DB	"16.68_musicmix  "				; Name tag (16 Bytes)
 ; Music Data
 CSEG AT 1B00h				;	[Frq], [Oct,Dur]
 Eep_Pgm_Music_Notes:		DB  6eh, 22h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h	; EEPROM copy of programmed 8 note bank (16 bytes)
-Eep_Pgm_Music_Durations:	DB	0ffh, 64h, 0deh								; Duration 0 is not used (means end of tune)
-Eep_Pgm_Music_DurationsSpc:	DS	13 
-Eep_Pgm_Music_Tunes:		DB  01h, 01h, 00h								; EEPROM copy of programmed 40 note tune (40 bytes)
-Eep_Pgm_Music_TunesSpace:	DS	37
+Eep_Pgm_Music_Durations:	DB	0ffh, 64h, 0deh, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h ; Duration 0 is not used (means end of tune)
+Eep_Pgm_Music_Tunes:		DB  01h, 01h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h	; EEPROM copy of programmed 40 note tune (40 bytes)
+Eep_Pgm_Music_Tunes2:		DB	00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h, 00h
 
 ;**** **** **** **** ****
 Interrupt_Table_Definition		; SiLabs interrupts
@@ -4093,11 +4092,11 @@ PlayNote:
 	movc A, @A+DPTR					; Read Duration of Note
 	mov Temp3, A					; Duration of note in Temp3
 
-	mov	Temp3, #222 								;length of tone		
-	mov Temp4, #110		
-	mov Temp5, #2									;one ms ;frequency of tone 1=500, 2=1000, 3=1500		
+;	mov	Temp3, #222 								;length of tone		
+;	mov Temp4, #110		
+;	mov Temp5, #2									;one ms ;frequency of tone 1=500, 2=1000, 3=1500		
 
-	jmp music						; Play the note
+	call music						; Play the note
 
 	pop ACC							; Retrieve the [Note] and [Rest] Byte
 	anl A, #0fh						; Mask the hi-nibble - Keep [Rest]
@@ -4105,7 +4104,7 @@ PlayNote:
 	movc A, @A+DPTR					; Read Duration of [Rest]
 	mov Temp2, A					; Duration of [Rest]
 
-	mov Temp2, #100		
+;	mov Temp2, #100		
 	call waitTemp2ms				; Wait the rest
 
 	mov DPTR, #Eep_Pgm_Music_Tunes	; The music score - list of notes and rests to play
