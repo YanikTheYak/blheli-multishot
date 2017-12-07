@@ -4,3 +4,5 @@ SiLabs/MakeHex_Result.txt
 *.MAP
 *.OMF
 BLHeli_S SiLabs/Output/
+
+\.DS_Store
